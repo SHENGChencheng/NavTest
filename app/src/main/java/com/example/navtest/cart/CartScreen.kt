@@ -27,7 +27,7 @@ fun CartScreen(
     Column(
         modifier = Modifier.fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.Center,
+        verticalArrangement = Arrangement.spacedBy(24.dp, Alignment.CenterVertically),
     ) {
         Text(text = "Cart")
         Column {
@@ -35,11 +35,9 @@ fun CartScreen(
                 CartItem(productId = product.productId, productQuantity = product.quantity)
             }
         }
-        Spacer(modifier = Modifier.height(24.dp))
         Button(onClick = { navigationActions.navigateToCheckout() }) {
             Text(text = "Proceed to Checkout")
         }
-        Spacer(modifier = Modifier.height(24.dp))
         Button(
             onClick = {
                 navigationActions.navigateBack()
