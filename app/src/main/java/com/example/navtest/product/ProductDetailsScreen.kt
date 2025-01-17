@@ -23,10 +23,9 @@ fun ProductDetailsScreen(
     Column(
         modifier = Modifier.fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.Center,
+        verticalArrangement = Arrangement.spacedBy(24.dp, Alignment.CenterVertically),
     ) {
         Text(text = "Product Details for ID: $productId")
-        Spacer(modifier = Modifier.height(24.dp))
         Button(
             onClick = {
                 cartViewModel.addProduct(productId, 1)
@@ -35,7 +34,6 @@ fun ProductDetailsScreen(
         ) {
             Text(text = "Add to Cart")
         }
-        Spacer(modifier = Modifier.height(24.dp))
         Button(
             onClick = {
                 navigationActions.navigateBack()
