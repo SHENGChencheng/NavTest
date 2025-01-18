@@ -1,6 +1,5 @@
 package com.example.navtest.cart
 
-import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import com.example.navtest.model.Product
